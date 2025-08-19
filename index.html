@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素記号暗記ゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧪 元素記号暗記ゲーム 🧪</h1>
+            <div class="score-board">
+                <span>スコア: <span id="score">0</span></span>
+                <span>残り: <span id="remaining">20</span></span>
+            </div>
+        </header>
+
+        <main>
+            <div id="game-area">
+                <div class="question-card">
+                    <h2>この元素記号は何でしょう？</h2>
+                    <div class="element-symbol" id="element-symbol">H</div>
+                    <div class="element-name" id="element-name-display" style="display: none;"></div>
+                </div>
+
+                <div class="answer-section">
+                    <div class="choices" id="choices">
+                        <!-- 選択肢がJavaScriptで動的に生成される -->
+                    </div>
+                    <button id="hint-btn" class="hint-btn">ヒント 💡</button>
+                    <div id="hint" class="hint" style="display: none;"></div>
+                </div>
+
+                <div class="result" id="result" style="display: none;">
+                    <div class="result-message" id="result-message"></div>
+                    <button id="next-btn" class="next-btn">次の問題へ →</button>
+                </div>
+            </div>
+
+            <div id="game-over" style="display: none;">
+                <h2>ゲーム終了！</h2>
+                <div class="final-score">
+                    <span>最終スコア: <span id="final-score">0</span> / 20</span>
+                </div>
+                <div class="grade" id="grade"></div>
+                <button id="restart-btn" class="restart-btn">もう一度プレイ 🔄</button>
+            </div>
+        </main>
+
+        <footer>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
